@@ -17,3 +17,4 @@ To prepare for the certification, I using two modes of study:
 * OCP Oracle Certified Professional Java SE 11 Developer Complete Study Guide: https://www.amazon.co.uk/gp/product/1119619130/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1
 * The above book also comes with 4 practice exams and electronic flash cards which I will use. While the book is aimed at the previous exam approach where there were two exams instead of one, the content is still relevant to the single exam. 
 * This study approach has worked well in the past as I find sometimes, the Udemy courses don't go into as much depth in certain areas as I would like so having the book gives me the opportunity to review areas that i'm struggling with.  
+
