@@ -8,7 +8,7 @@ This repository has been set up to store my notes and source code covering the J
 
 ## How to use this repository?
 
-The following document will contain all my notes to help me prepare for the exam. I will also include source code which will be organised in folders. I'm really just using this for my benefit and to help me track all of my work however If you stumble across it and you find it helpful then that's fine with me! 👌
+This repository will contain all my notes to help me prepare for the exam. I will also include source code which will be organised in folders. I'm really just using this for my benefit and to help me track all of my work however If you stumble across it and you find it helpful then that's fine with me! 👌
 
 ## How am I preparing?
 
