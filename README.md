@@ -20,7 +20,7 @@ To prepare for the certification, I using two modes of study:
 
 Initially, my plan was to keep my notes in one readme file, until the book came which is the size of a house! 😲 Instead, I will create separate documents and will split them per chapter!
 
-## Am i using the right version of Java?
+## Am I using the right version of Java?
 
 The certification covers Java SE 11. If you want to know whaat version you are running, open your command prompt:
 * java -version
