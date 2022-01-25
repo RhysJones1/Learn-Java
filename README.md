@@ -4,8 +4,6 @@
 
 ![image](https://user-images.githubusercontent.com/91537105/150771565-bda91800-eaf5-40e6-b00b-311e9f3775b5.png)
 
-This repository has been set up to store my notes and source code covering the Java SE 11 Certification. This repository will grow over time as I progress further with my studies.
-
 ## How to use this repository?
 
 This repository will contain all my notes to help me prepare for the exam. I will also include source code which will be organised in folders. I'm really just using this for my benefit and to help me track all of my work however If you stumble across it and you find it helpful then that's fine with me! 👌
