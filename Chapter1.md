@@ -59,6 +59,39 @@ At the most basic level, a Java class looks like this:
 public class Animal {
 }
 ```
+class is a key word meaning you can't define a variable with the word class. Public is an access modifier which tells us whether the class can be used elsewhere or in one place (private)
 
+Let's stick with the above class and build on it by adding a field within the class:
 
+``` Java
+public class Animal{
+ String name;
+
+}
+```
+
+Here we have added a field called name of the type String. Let's add a method:
+
+``` Java
+public class Animal{
+ String name;
+ public String getName(){
+  return name;
+  }
+  public void setName(String newName){
+   name = newName;
+  
+ }
+
+}
+```
+While the above is very basic, there are some key fundamentals here which regardless of how complex your program becomes they remain applicable:
+
+* Methods can be called and the change the state of the program
+* public is the access modifer which tells us thta this methods can be called from other classes
+* We define the return type which in this case is of the type string
+* In some cases, we don't want to return anything and in these situations, we use 'void' which returns no value
+* Within the second method, in brackets we have specified that information is required when calling the method and this is known as a parameter
+* The method name and parameter types is known as the method signature 
+* The method declaration goes further and includes additonal information such as the return type.
 
