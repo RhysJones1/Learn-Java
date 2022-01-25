@@ -96,5 +96,7 @@ While the above is very basic, there are some key fundamentals here which regard
 * The method declaration goes further and includes additonal information such as the return type.
 * The file name must match the name of the class. In this case our file name would need to be called Animal.java otherwise, it won't compile. We also need a main method to complile which is covered next.
 
+## main() Method
+
 
 
