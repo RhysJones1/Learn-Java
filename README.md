@@ -16,3 +16,6 @@ To prepare for the certification, I using two modes of study:
 * The above book also comes with 4 practice exams and electronic flash cards which I will use. While the book is aimed at the previous exam approach where there were two exams instead of one, the content is still relevant to the single exam. 
 * This study approach has worked well in the past as I find sometimes, the Udemy courses don't go into as much depth in certain areas as I would like so having the book gives me the opportunity to review areas that i'm struggling with.  
 
+## My Notes
+
+Initially, my plan was to keep my notes in one readme file, until the book came which is the size of a house! 😲 Instead, I will create separate documents and will split them per chapter!
