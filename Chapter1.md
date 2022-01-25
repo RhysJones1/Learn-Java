@@ -87,11 +87,14 @@ public class Animal{
 ```
 While the above is very basic, there are some key fundamentals here which regardless of how complex your program becomes they remain applicable:
 
-* Methods can be called and the change the state of the program
-* public is the access modifer which tells us thta this methods can be called from other classes
-* We define the return type which in this case is of the type string
+* Methods can be called and change the state of the program. Sometimes these changes are stored as variables
+* public is the access modifer which tells us that this method can be called from other classes
+* We define the return type which in this case is of the type String
 * In some cases, we don't want to return anything and in these situations, we use 'void' which returns no value
-* Within the second method, in brackets we have specified that information is required when calling the method and this is known as a parameter
+* Within the second method, in brackets we have specified that information is required when calling the method (getName) and this is known as a parameter. 
 * The method name and parameter types is known as the method signature 
 * The method declaration goes further and includes additonal information such as the return type.
+* The file name must match the name of the class. In this case our file name would need to be called Animal.java otherwise, it won't compile. We also need a main method to complile which is covered next.
+
+
 
