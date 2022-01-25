@@ -39,4 +39,26 @@ Developers also utilise IDE's (Integrated development environments) such as Inte
 * **Multithreaded**: Allows for the running of multiple pieces of code
 * **Backword Compatibility**: Every effort is made to ensure that older programs work on later versions of Java
 
+## Understanding the Java Class Structure
+
+Classes are the building blocks of any Java program. Objects are instantiated on the back of creating classes and inherit information from them. An object is essentially an instance of a class. There can be many Classes within a program and many more objects. All of the objects represent the current state of your program.
+
+![image](https://user-images.githubusercontent.com/91537105/151005553-7102d1e6-3fb6-4347-86c6-28b0cf30193e.png)
+
+### Fields and Methods 
+
+Classes have two primary elements:
+* Methods often known as procedures and functions in other languages
+* Fields: more often known as variables 
+
+Fields represents the state of the program and Methods operate on the state. There are other building blocks such as interfaces however, for now this pretty much make up a Java Class.
+
+At the most basic level, a Java class looks like this:
+
+``` Java
+public class Animal {
+}
+```
+
+
 
