@@ -92,9 +92,20 @@ While the above is very basic, there are some key fundamentals here which regard
 * Within the second method, in brackets we have specified that information is required when calling the method (getName) and this is known as a parameter. 
 * The method name and parameter types is known as the method signature 
 * The method declaration goes further and includes additonal information such as the return type.
-* The file name must match the name of the class. In this case our file name would need to be called Animal.java otherwise, it won't compile. We also need a main method to complile which is covered next.
+* The file name must match the name of the class. In this case our file name would need to be called Animal.java otherwise, it won't compile. We also need a main() Method to complile which is covered next.
 
 ## main() Method
 
+A Jave program begins execution with its main() Method, without it your code won't work. The main() method in effect is the gateway between the JVM and your program, the main() methods lets the JVM call your code. At the most basic level a main method looks like this:
 
+``` Java
+public class Zoo {
+ public static void main(String[] args){
+ 
+  }
+
+}
+```
+
+The code doesn't do much here other than declare the entry point for your program to work.
 
