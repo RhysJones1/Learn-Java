@@ -160,4 +160,40 @@ public class ImportExample {
  }
 }
 ```
-Now the code runs, we have a simple program that prints a random number between 0-9
+Now the code runs, we have a simple program that prints a random number between 0-9. The import statement tells compiler which package to look in to find the class.
+
+## Wildcards
+
+Classes in the same package are often imported together, you can use this shortcut by writing:
+
+``` Java
+import java.util.*; // Imports the random class amongst other things
+public class ImportExample {
+ public static void main(String[] args){
+  Random r = new Random(); 
+  System.out.println(r.nextInt(10));
+ }
+}
+```
+Here the * is the wildcard that matches all the classes in the package and makes them all available. If the program uses another class within java.util such as Scanner, then no further imports would be required.
+
+Check with your team to see if there are coding conventions when it comes to importing packages.
+
+## Redundant Imports
+
+There are some imports that are done automatically, notice that we've used System in the above code and it hasn't raised an error. This is because of an automatic import called ```import java.lang.*``` You can add it to the top of your code but you don't need to, hense why we call it redundant. Another time something is considered redundant is when we import a package twice for example ```import java.util*``` and then adding ```import java.util.Random```
+
+Here's another example of correctly using imports:
+
+``` Java
+import java.nio.file.* // Option 1: wildcard import
+// Option 2: Import both classes explicitly
+// import java.nio.file.Files;
+//import java.nio.file.Paths;
+public class InputImports{
+ public void read(Files files){
+  Paths.get("name");
+ }
+
+}
+```
