@@ -255,3 +255,56 @@ You can also import your own package. Take a look at the source code 'Getting st
 
 This certification includes a lot of work on the command line  so here, we are covering compiling and running code with packages. To practice, I've got two very basic programs sitting in two different packages: packagea which includes ClassA and packageb which includes ClassB. ClassB will import information from ClassA and if successful it should return 'Got it!'
 
+``` Java
+package packagea;
+
+public class ClassA {
+}
+```
+
+``` Java
+package packageb;
+import packagea.ClassA;
+public class ClassB {
+    public static void main(String[] args){
+        ClassA a;
+        System.out.println("Got it!");
+
+    }
+}
+```
+
+```
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\rhysj>cd Programming\Java SE 11\packagea
+
+C:\Users\rhysj\Programming\Java SE 11\packagea>cd src
+
+C:\Users\rhysj\Programming\Java SE 11\packagea\src>javac packagea\ClassA.java packageb\ClassB.java
+
+C:\Users\rhysj\Programming\Java SE 11\packagea\src>java packageb.ClassB
+Got it!
+
+```
+As you can see here, we have successfully compiled two packages and then ran packageb and returned the statement we expected. Using this approach, the compiled class files are stored in the same location as .java files. 
+
+### Using an Alternate Directory
+There are instances though when you need to store these files in another directory. Using the same two packages, we will do just that:
+
+```
+C:\Users\rhysj\Programming\Java SE 11\packagea\src>javac -d classes packagea\ClassA.java packageb\ClassB.java
+
+C:\Users\rhysj\Programming\Java SE 11\packagea\src>java -cp classes packageb.ClassB
+Got it!
+
+C:\Users\rhysj\Programming\Java SE 11\packagea\src>java -classpath classes packageb.ClassB
+Got it!
+
+C:\Users\rhysj\Programming\Java SE 11\packagea\src>java --class-path classes packageb.ClassB
+Got it!
+
+```
+As you can see, we added the class files to a file names classes and then we demonstrated three different ways to run the program from the command line. -cp is the most common amongst programmers as it is the fastest! All three need to be learnt for the exam.
+
+
