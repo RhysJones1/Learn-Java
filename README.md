@@ -36,4 +36,44 @@ Before diving into the chapters a quick note on compiling and running code. Thro
 ```
 set path=%path%;C:\Program Files\Java\jdkENTER_VERSION_HERE\bin
 ```
-* 
+* Now, you can use Javac and Java to complile and run your program:
+
+```
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\rhysj>cd Programming\Java SE 11\Zoo
+
+C:\Users\rhysj\Programming\Java SE 11\Zoo>dir
+ 
+ Directory of C:\Users\rhysj\Programming\Java SE 11\Zoo
+
+26/01/2022  10:17    <DIR>          .
+26/01/2022  10:17    <DIR>          ..
+26/01/2022  10:30    <DIR>          .idea
+26/01/2022  10:17    <DIR>          out
+26/01/2022  10:30    <DIR>          src
+26/01/2022  10:13               433 Zoo.iml
+               1 File(s)            433 bytes
+               5 Dir(s)  383,500,382,208 bytes free
+
+C:\Users\rhysj\Programming\Java SE 11\Zoo>cd src
+
+C:\Users\rhysj\Programming\Java SE 11\Zoo\src>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 8683-D649
+
+ Directory of C:\Users\rhysj\Programming\Java SE 11\Zoo\src
+
+26/01/2022  10:30    <DIR>          .
+26/01/2022  10:30    <DIR>          ..
+26/01/2022  10:30               487 Zoo.class
+26/01/2022  10:30               214 Zoo.java
+               2 File(s)            701 bytes
+               2 Dir(s)  383,500,382,208 bytes free
+
+C:\Users\rhysj\Programming\Java SE 11\Zoo\src>javac Zoo.java
+
+C:\Users\rhysj\Programming\Java SE 11\Zoo\src>java Zoo
+Hello World!
+I have compiled and run my code through the command line!
+```
