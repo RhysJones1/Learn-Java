@@ -246,3 +246,8 @@ public class Conflicts {
 
 }
 ```
+
+## Creating a New Package
+
+You can also import your own package. Take a look at the source code 'Getting started' which shows lots of examples of importing your own packages.
+
