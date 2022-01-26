@@ -59,10 +59,8 @@ C:\Users\rhysj\Programming\Java SE 11\Zoo>dir
 C:\Users\rhysj\Programming\Java SE 11\Zoo>cd src
 
 C:\Users\rhysj\Programming\Java SE 11\Zoo\src>dir
- Volume in drive C is Windows
- Volume Serial Number is 8683-D649
-
- Directory of C:\Users\rhysj\Programming\Java SE 11\Zoo\src
+ 
+Directory of C:\Users\rhysj\Programming\Java SE 11\Zoo\src 
 
 26/01/2022  10:30    <DIR>          .
 26/01/2022  10:30    <DIR>          ..
