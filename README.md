@@ -75,3 +75,6 @@ C:\Users\rhysj\Programming\Java SE 11\Zoo\src>java Zoo
 Hello World!
 I have compiled and run my code through the command line!
 ```
+If you were successful, you should have no error messages. In order to compile you need a file ending in .java. When it is compiled a new folder is created which ends in .class.
+
+Each file can contain only one public class and the filename must match the class name , incuding case. and have a .java extension. 
