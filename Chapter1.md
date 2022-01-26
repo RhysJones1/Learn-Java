@@ -251,3 +251,7 @@ public class Conflicts {
 
 You can also import your own package. Take a look at the source code 'Getting started' which shows lots of examples of importing your own packages.
 
+## Compiling and Running Code with Packages
+
+This certification includes a lot of work on the command line  so here, we are covering compiling and running code with packages. To practice, I've got two very basic programs sitting in two different packages: packagea which includes ClassA and packageb which includes ClassB. ClassB will import information from ClassA and if successful it should return 'Got it!'
+
