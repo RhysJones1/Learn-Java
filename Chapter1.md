@@ -186,7 +186,7 @@ There are some imports that are done automatically, notice that we've used Syste
 Here's another example of correctly using imports:
 
 ``` Java
-import java.nio.file.* // Option 1: wildcard import
+import java.nio.file.*; // Option 1: wildcard import
 // Option 2: Import both classes explicitly
 // import java.nio.file.Files;
 //import java.nio.file.Paths;
@@ -194,6 +194,55 @@ public class InputImports{
  public void read(Files files){
   Paths.get("name");
  }
+
+}
+```
+
+## Naming Conflicts
+
+There are instances where you want to import a Class that can be found in multiple places. Take the Date class as an example, this can be found in ``` import java.util.Date``` and ``` import java.sql.Date```. We could also use ``` import java.util.*``` as we have seen above. The problem comes in this situation below:
+
+``` Java
+import java.util.*;
+import java.slq.*;
+public class Conflicts {
+ Date date;
+  // some more code
+
+}
+```
+The following will return a compiler error ```error: reference to Date is ambiguous```. In this example we would simple remove java.sql.* and the issue would be resolved, but what if we need to import a class from this package? To overcome this we outline java.util explicitly:
+
+``` Java
+import java.util.Date;
+import java.slq.*;
+public class Conflicts {
+ Date date;
+  // some more code
+
+}
+```
+
+If you import a package explicitly, this takes precedence over wildcards. So our first import above takes precedence over our second import as it includes a wildcard.
+
+In our example above, if we were to explicitly import the two like: ```import java.util.Date;``` and ```import java.slq.Date;``` We will be back to square one and recieve the same error message ```error: reference to Date is ambiguous```.
+
+If you really needed the two, then you can import one and use the others fully qualified Class name to show it's special. For example:
+
+``` Java
+import java.util.Date;
+public class Conflicts {
+ Date date;
+ java.sql.Date sqlDate;
+
+}
+```
+Or, you could import neither and add java.util.date within the code:
+
+``` Java
+public class Conflicts {
+ java.util.Date date
+ java.sql.Date sqlDate;
 
 }
 ```
