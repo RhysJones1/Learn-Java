@@ -101,11 +101,63 @@ A Jave program begins execution with its main() Method, without it your code won
 ``` Java
 public class Zoo {
  public static void main(String[] args){
- 
-  }
-
+ }
 }
 ```
 
 The code doesn't do much here other than declare the entry point for your program to work.
 
+Terminology of the main() Method:
+* public: We've covered this but to clarify this is our access modifier and declares the method level of exposure. As it's public this means anywhere in the program
+* static: binds a method to it's class so it can be called by just the class name. So with Zoo, we can call Zoo.main() rather than create an object. As we've discussed already, without the main() method when you try and run the program, the computer will say no!
+* void: specifies the return type in this case void returns no data.
+  * It's good practice to use void for methods that change the state of an object. With main() we are changing the program from start to finish
+* main() parameter list: args hints that this list contains values that were read in arguments when the JVM started. [] represents an array
+
+## Passing Parameters to a Java Program
+
+You can send data to your programs main methods by doing the following:
+
+``` Java
+public class Zoo{
+ public static void main(String[] args){
+  System.out.println(args[0]);
+  System.out.println(args[1]);
+ }
+
+}
+```
+At cmd:
+```
+javac Zoo.java
+java Zoo London Bristol
+```
+Output:
+```
+London
+Bristol
+```
+
+## Package Declarations and Imports
+
+Java has thousands of built in classes which are stored in packages. In order to use one of the built in classes, you need to tell the program, otherwise you get an error:
+
+``` Java
+public class ImportExample {
+ public static void main(String[] args){
+  Random r = new Random(); // DOES NOT COMPILE: Missing an import therefore the program doesn't know where to look
+  System.out.println(r.nextInt(10));
+ }
+}
+```
+Let's add the import:
+``` Java
+import java.util.Random; // Imports the random class
+public class ImportExample {
+ public static void main(String[] args){
+  Random r = new Random(); 
+  System.out.println(r.nextInt(10));
+ }
+}
+```
+Now the code runs, we have a simple program that prints a random number between 0-9
