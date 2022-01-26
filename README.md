@@ -29,7 +29,7 @@ The certification covers Java SE 11. If you want to know whaat version you are r
 
 ## Compiling and Running a Program on cmd
 
-Before diving into the chapters a quick note on compiling and running code. Throughout the book it asks you to compile and run your program via command line. So here's a few reminder points:
+Before diving into the chapters a quick note on compiling and running code. Throughout the book it asks you to compile and run your program via command line. So here's a few reminder points (I've never used a mac before so I only know the windows commands):
 
 * Make sure you have installed the Java 11 SDK and added it to the path: 
 
