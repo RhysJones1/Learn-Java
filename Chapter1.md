@@ -39,6 +39,7 @@ Developers also utilise IDE's (Integrated development environments) such as Inte
 * **Multithreaded**: Allows for the running of multiple pieces of code
 * **Backword Compatibility**: Every effort is made to ensure that older programs work on later versions of Java
 
+
 ## Understanding the Java Class Structure
 
 Classes are the building blocks of any Java program. Objects are instantiated on the back of creating classes and inherit information from them. An object is essentially an instance of a class. There can be many Classes within a program and many more objects. All of the objects represent the current state of your program.
@@ -93,6 +94,14 @@ While the above is very basic, there are some key fundamentals here which regard
 * The method name and parameter types is known as the method signature 
 * The method declaration goes further and includes additonal information such as the return type.
 * The file name must match the name of the class. In this case our file name would need to be called Animal.java otherwise, it won't compile. We also need a main() Method to complile which is covered next.
+
+### Ordering Elements in a Class:
+
+* Packages
+* Imports
+* Class 
+* Fields
+* Methods
 
 ## main() Method
 
