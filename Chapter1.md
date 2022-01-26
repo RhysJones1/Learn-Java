@@ -43,8 +43,6 @@ Developers also utilise IDE's (Integrated development environments) such as Inte
 
 Classes are the building blocks of any Java program. Objects are instantiated on the back of creating classes and inherit information from them. An object is essentially an instance of a class. There can be many Classes within a program and many more objects. All of the objects represent the current state of your program.
 
-![image](https://user-images.githubusercontent.com/91537105/151005553-7102d1e6-3fb6-4347-86c6-28b0cf30193e.png)
-
 ### Fields and Methods 
 
 Classes have two primary elements:
