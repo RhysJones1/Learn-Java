@@ -295,3 +295,27 @@ public void example() {
 }
 ```
 
+Taking the example above, say we first declare a short for 7 and then byte for 5. Despite setting it to byte, it will remain a short, why? because short is larger then byte. Java has no problem promoting as there are no memory concerns. Java however does not allow demoting as this can cause memory loss. 
+
+Note that when declaring vars, for it to compile successfully, you need to initialise the variable on the same line. You cannot assign null either to var as Java wouldn't know what data type to assign. The only way around this rule is if you declare it first and then assign null on a different line, this however would only work with String as primitive data types cannot be assigned null.
+
+#### Review of var Rules
+
+Here's a quick review of the var rules:
+1. A var is used as a local variable in a constructor, method, or initializer block.
+2. A var cannot be used in constructor parameters, method parameters, instance variables, or class variables.
+3. A var is always initialized on the same line (or statement) where it is declared.
+4. The value of a var can change, but the type cannot.
+5. A var cannot be initialized with a null value without a type.
+6. A var is not permitted in a multiple-variable declaration.
+7. A var is a reserved type name but not a reserved word, meaning it can be used as an
+identifier except as a class, interface, or enum name.
+
+## Managing Variable Scope
+
+
+
+
+
+
+
