@@ -137,4 +137,31 @@ Remember, String is not a primative data type, it's an object. Java does have bu
 
 ### Writing literals 
 
+There are a few more things you should know about numeric primitives. When a number is present in the code, it is called a literal. By default, Java assumes you are defining an int value with a numeric literal.
+
+In the following example, the number listed is bigger than what fits in an int.
+``` Java
+long max = 3123456789; // DOES NOT COMPILE 
+                       // By default, Java is setting this to an int and therefore it is out of range
+                       // The solution is to specify it is a Long by adding an L
+```
+Solution:
+``` Java
+long max = 3123456789L; // DOES COMPILE 
+                       // Java knows it is a long
+```
+### Literals and Underscore Character
+
+To make reading long numbers easier, you have include underscores:
+
+``` Java
+int million1 = 1000000
+int million2 = 1_000_000;
+// You can't add at the start and the end 
+// The goal is to make your code readable
+```
+### Reference Types
+
+Reference types refer to an object. Unlike primative types that hold their memory where the variable is located, references do not hold the value of the object they refer to. Instead a reference "points" to an object by storing the memory address where the object is located 
+
 
