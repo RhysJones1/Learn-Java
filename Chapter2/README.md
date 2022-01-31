@@ -157,11 +157,106 @@ To make reading long numbers easier, you have include underscores:
 ``` Java
 int million1 = 1000000
 int million2 = 1_000_000;
-// You can't add at the start and the end 
-// The goal is to make your code readable
+                           // You can't add at the start and the end 
+                           // The goal is to make your code readable
 ```
 ### Reference Types
 
 Reference types refer to an object. Unlike primative types that hold their memory where the variable is located, references do not hold the value of the object they refer to. Instead a reference "points" to an object by storing the memory address where the object is located 
+
+Examples:
+
+``` Java 
+java.util.Date today;         // the today variable is a reference of type Date and can only point to the Date object
+String greeting;              // the greeting variable is areference of type String and can only point to the String object       
+``` 
+![image](https://user-images.githubusercontent.com/91537105/151806494-218c2aa4-ffad-4310-8373-32927caec257.png)
+
+### Distinguishing between Primative and Reference Types
+
+There are a few important differences you should know between primitives and reference types:
+* First, reference types can be assigned null, which means they do not currently refer to an object. Primitive types will give you a compiler error if you attempt to assign them null.
+* In this example, value cannot point to null because it is of type int:
+``` Java
+int value = null; //  DOES NOT COMPILE
+String s = null;
+```
+* But what if you don't know the value of an int and want to assign it to null? In that case, you should use a numeric wrapper class, such as Integer, instead of int.
+* Next, reference types can be used to call methods, assuming the reference is not null.
+* Primitives do not have methods declared on them. 
+* ```int bad = len. length(); // DOES NOT COMPILE```
+* Remember all primative data types start with a lower case, reference types start with an upper.
+
+### Identifiers
+
+An identifier is a name of a variable, method, class, interface or package. The following rules apply to identifiers:
+1. Must begin with a letter, a $ symbol or a _ symbol
+2. Can include numbers but start with them
+3. Cannot be a single underscore
+4. Cannot use a reserved word
+5. 
+
+The following are examples of legal identifiers:
+``` Java
+long okidentifier;                     // All of these are legal
+float $0K2Identifier;
+boolean _also0K1d3ntfifier;
+char __SStill0KbutKnotsonice$;
+
+                                       // Illegal Examples
+
+int 3DPointClass;                      // Can't start with a number
+byte hollywood@vine;                   // Can't use the @ symbol
+String *$coffee;                       // Can't use the * symbol
+double public;                         // Reserved word
+short _ ;                              // single underscore not allowed
+```
+### Coding Conventions 
+
+The two most popular conventions to ensure readable and consistent code are:
+
+1. camelCase: Capitalising the first letter of every word:
+``` Thisismyclass or ThisIsMyClass which one do you prefer? ```
+2. snake_case: ```this_is_my_class```
+
+### Declaring Multiple Variables 
+
+You can declare multiple variables on one line. For example:
+``` Java
+void sandFence() {
+String s1, s2;
+String s3 = "yes", s4 = "no";       // There are 4 variables here. You can declare as many variables as you want on the same line so long they are of the same type
+}
+```
+Remember the difference between declared and initialised as its common questions in exams:
+
+``` Java
+void paintFence {
+int i1, i2, i3 = 0;                 // 3 variables are declared however only one is initialised and that is i3. the ',' marks the next declaration.
+}
+```
+
+As far as conventions are concerned one declaration per statement and line is the way forward.
+
+### Creating Local Variables
+
+A local variable is a variable that is declared within a constructor, method or initialiser block. They do not have a default value and need to be initialised before use.
+
+``` Java
+public int notValid() {
+   int y = 10;
+   int x;
+   int reply = x + y;               // does not compile as he have yet to intialised x
+   return reply;
+}
+
+public int valid() {
+   int y = 10;
+   int x;                           // x is declared
+   x = 3;                           // x is initialised
+   int reply = x + y;               // x is now initialised so this will compile
+   return reply;
+}
+```
 
 
