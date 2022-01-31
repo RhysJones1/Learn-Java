@@ -283,3 +283,14 @@ var name = "Hello";
 var size = 7;
 }
 ```
+
+The formal name for this feature is local variable type inference and as the name suggests, can only be used in local variables. the second part type inference means that when assigning var, we are asking the compiler to make this decision for us. For example:
+
+``` Java 
+public void example() {
+   var number = 7;         // Compiler assigns int as the type
+   number = 5;             // No problem here and the variable will be changed to 5
+   number = "five"         // Will not compile. The compiler has already assigned number to type int. Trying to assign the word five causes problems here
+                           // as it would be the equivalent of trying to assign a word to the type int
+}
+```
