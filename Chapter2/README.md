@@ -258,5 +258,20 @@ public int valid() {
    return reply;
 }
 ```
+### Constructor or Method Parameters
 
+Variables passed to a contructor or method are called constructor parameters or method parameters. These parameters are local variables that have been pre initialised. The rules around the two are the same.
+
+### Instance and Class Variables
+
+Variables that are not defined locally are either an instance variables or class variables.
+
+Instance variables, also known as fields is a value defined within a specific instance of an object For example within a class Person, you could have a field called name of the type String. Each instance of that object will have a different value within that field ie a different name. Two instances could have the same value but changing one will not affect the other. 
+
+Class variables on the other hand is one that is defined on the class level and shared among all instances of the class and can even be accessible to other classes. In the previous example above we could use a class variable to represent the list of people at the zoo today.
+
+* You can tell its a class variable because it has the word static before it.
+* You don't need to initialise them as they are given a default value 
+
+### Introducing Var
 
