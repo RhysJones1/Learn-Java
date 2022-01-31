@@ -294,3 +294,4 @@ public void example() {
                            // as it would be the equivalent of trying to assign a word to the type int
 }
 ```
+
