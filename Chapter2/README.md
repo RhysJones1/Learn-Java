@@ -117,3 +117,24 @@ Tiny
 
 ## Data Types
 
+Java contains two types of data: primative and reference. We state our types mainly for memory purposes for example using int would mean that Java allocates 32bits in memory.
+
+### Primative Data Types
+
+Java has eight primative data types. These represent the building blocks to java objects, they are essentially values held in memory either numerical or character
+
+![image](https://user-images.githubusercontent.com/91537105/151787663-ffb883da-9de1-4434-bb87-205b62244cb1.png)
+
+Remember, String is not a primative data type, it's an object. Java does have built in support for Strings literals and operators but they are objects.
+
+* The float and double types are used for floating-point (decimal) values.
+* A float requires the letter f following the number so Java knows it is a float.
+* The byte, short, int, and long types are used for numbers without decimal points. In mathematics, these are all referred to as integral values, but in Java, int and Integer refer to specific types.
+* Each numeric type uses twice as many bits as the smaller similar type. For example, short uses twice as many bits as byte does. 
+* All of the numeric types are signed in Java. This means that they reserve one of their bits to cover a negative range. For example, byte ranges from -128 to 127. You might be surprised that the range is not -128 to 128. Don't forget, O needs to be accounted for too in the range.
+* Signed and Unsigned: signed means it shares its value over both positive and negative numbers whereas unsigned range is strictly postive. This measn that unsigned can reach a higher positive value than signed.
+* You won't be asked about the exact sizes of most of these types, although you should know that a byte can hold a value from -128 to 127.
+
+### Writing literals 
+
+
