@@ -275,3 +275,11 @@ Class variables on the other hand is one that is defined on the class level and 
 
 ### Introducing Var
 
+From Java 10 onwards you have the ability to use the term Var instead of the data type in some certain situations. For example:
+
+``` Java
+public void whatTypeAmI() {
+var name = "Hello";
+var size = 7;
+}
+```
