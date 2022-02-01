@@ -313,7 +313,9 @@ identifier except as a class, interface, or enum name.
 
 ## Managing Variable Scope
 
+In Java, variables are only accessible inside the region they are created. This is called scope.
 
+Local variables can never have a scope larger than the method they are defined in however they can have a larger scope
 
 
 
