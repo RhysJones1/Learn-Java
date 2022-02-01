@@ -91,7 +91,7 @@ The following code snippet illustrates this distinction:
 
 ``` Java
 int parkAttendance = 0;
-System.out.printin(parkÄttendance);      // 0
+System.out.printin(parkAttendance);      // 0
 System.out.println(++parkAttendance);    // 1
 System.out.println(parkAttendance);      // 1
 System.out.println(parkAttendance--);    // 1
