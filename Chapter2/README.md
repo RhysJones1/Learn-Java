@@ -364,4 +364,18 @@ public void eatMore(boolean hungry, int amountOfFood) {        // Variables hung
 ```
 ## Applying Scope to Classes
 
-So far we have only discussed scope in the context of local variables. Instance variables are more straightforward they are available as soon as they are defined and last the entire lifetime of the object itself.
+So far we have only discussed scope in the context of local variables. Instance variables are more straightforward, they are available as soon as they are defined and last the entire lifetime of the object itself.
+
+The rules around class aka static is even more straight forward, they go into scope when they are declared and stay in scope for the lifetime of the program. They have the term static before them for example ``` static int MAX_LENGTH = 5; ```
+
+### Reviewing Scope
+
+1. Local Variables: In scope from declaration to the end of the block
+2. Instance Variables: In scope from declaration until the object is eligible for garbage collection
+3. Class Variable: In scope from declaration until program ends
+
+## Destroying Objects
+
+JVM automatically takes care of removing objects and has a built in garbage collector which looks for objects that are no longer needed. All objecs are stores in your program memory heap also known as the free store which represents a large pool of unused memory allocated to the Java application. While memory has become less of an issue with modern computing eventually you will run out of memory if there isn't a process of removing unwanted or used objects. 
+
+Eligible for garbage collection refers to an objects state of no longer being accessible in a program and therefore able to be garbage collected. Once it is eligible, it isn't necessarily discarded immediately, the developer has no control as to when the JVM wil perfrom the task other than knowing it is the JVM's responsibility to carry the task out.There are languages such as C where the developer must ensure garbage collection  is factored into their code otherwise a whole host of issues could occur such as security issues (think credit card details) or running out of memory. 
