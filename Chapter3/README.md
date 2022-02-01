@@ -81,4 +81,21 @@ boolean penguin = -true;        // DOES NOT COMPILE: you cannot numerically nega
 boolean peacock = !0;           // DOES NOT COMPILE: you cannot take the logical complement of a numeric value, nor can you assign an integer to a boolean variable.
 ```
 
+### Increment and Decrement Operators
+
+Increment and decrement operators, +* and -, respectively, can be applied to numeric variables and have a high order of precedence, as compared to binary operators. In other words, they often get applied first in an expression.
+
+Increment and decrement operators require special care because the order in which they are attached to their associated variable can make a difference in how an expression is processed. If the operator is placed before the operand, referred to as the pre-increment operator and the pre-decrement operator, then the operator is applied first and the value returned is the new vale of the expression. Alternatively, if the operator is placed after the operand, referred to as the post-increment operator and the post-decrement operator, then the original value of the expression is returned, with operator applied after the value is returned.
+
+The following code snippet illustrates this distinction:
+
+``` Java
+int parkAttendance = 0;
+System.out.printin(parkÄttendance);      // 0
+System.out.println(++parkAttendance);    // 1
+System.out.println(parkAttendance);      // 1
+System.out.println(parkAttendance--);    // 1
+System.out.println(parkAttendance);      // 0
+```
+The first pre-increment operator updates the value for parkAttendance and outputs the new value of 1. The next post-decrement operator also updates the value of parkAttendance but outputs the value before the decrement occurs.
 
