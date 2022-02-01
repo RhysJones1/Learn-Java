@@ -315,9 +315,53 @@ identifier except as a class, interface, or enum name.
 
 In Java, variables are only accessible inside the region they are created. This is called scope.
 
-Local variables can never have a scope larger than the method they are defined in however they can have a larger scope
+Local variables can never have a scope larger than the method they are defined in however they can have a larger scope. The following example illustrates how scope works:
 
+``` Java
+public void eatIfHungry(boolean hungry) {
+   if (hungry) {
+      int bitesOfCheese = 1;
+   } // bitesOfCheese goes out of scope here
+   System.out.println(bitesOfCheese);           // DOES NOT COMPILE: the variable bitesOfCheese is declared within the if statement. 
+}
+```
 
+In the above example, the variable hungry has a scope of the entire method, while the variable bitesOfCheese has a smaller scope as it is declared inside of the if statement. Looking where the curly braces lie tells you where the code block starts and ends and where the variables are declared. 
 
+### Nesting Scope
 
+Remember that blocks often contain other blocks, the smaller contained blocks can reference the larger blocks but not vice versa
 
+``` Java
+public void eatIfHungry(boolean hungry) {
+   if (hungry) {
+      int bitesOfCheese = 1;
+      {
+         var teenyBit = true;
+         System.out.println(bitesOfCheese);     // This Compiles as a smaller block can reference a variable from a larger block
+      }
+   }
+   System.out.println(bitesOfCheese);           // DOES NOT COMPILE: Larger blocks can't reference smaller blocks due to limiting scope
+}
+```
+This is a very common question in exams so the following example is a little harder. The best approach to follow is 1: Identify the Blocks of code 2: Identify the Scope and where they start and end:
+
+``` Java
+
+public void eatMore(boolean hungry, int amountOfFood) {        // Variables hungry and amountOfFood are method paramters so they are available across the whole method
+   int roomInBelly = 5;                                        // Declared at method level and therefore remains in scope throughout
+   if (hungry) {
+      var timeToEat = true;                                    // timeToEat is declared within the if statement and is only available between lines 4 - 10
+      while (amountOfFood > 0) {
+         amountEaten = 2;                                      // amountEaten is available between lines 6 -10
+         roomInBelly = roomInBelly - amountEaten;
+         amountOfFood = amountOfFood - amountEaten;
+      }
+   }
+   System.out.println(amountOfFood);                           // This compiles as the variable amountOfFood is declared as a method parameter
+
+}
+```
+## Applying Scope to Classes
+
+So far we have only discussed scope in the context of local variables. Instance variables are more straightforward they are available as soon as they are defined and last the entire lifetime of the object itself.
