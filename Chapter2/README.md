@@ -379,3 +379,16 @@ The rules around class aka static is even more straight forward, they go into sc
 JVM automatically takes care of removing objects and has a built in garbage collector which looks for objects that are no longer needed. All objecs are stores in your program memory heap also known as the free store which represents a large pool of unused memory allocated to the Java application. While memory has become less of an issue with modern computing eventually you will run out of memory if there isn't a process of removing unwanted or used objects. 
 
 Eligible for garbage collection refers to an objects state of no longer being accessible in a program and therefore able to be garbage collected. Once it is eligible, it isn't necessarily discarded immediately, the developer has no control as to when the JVM wil perfrom the task other than knowing it is the JVM's responsibility to carry the task out.There are languages such as C where the developer must ensure garbage collection  is factored into their code otherwise a whole host of issues could occur such as security issues (think credit card details) or running out of memory. 
+
+### Calling System.gc()
+
+Java has the following built in method to help support garbage collection:
+
+``` Java
+public static void main(String[] args){
+   System.gc();                           // It doesn't do much other then suggest to the JVM to begin garbage collection. It doesn't guarantee that the JVM garbage collection
+}                                         // will kick in, in fact the JVM is entitled to ignore the request if it's busy doing something
+```
+
+The key thing to take away here is that garbage collection is not in the developers control and it's the JVM's responsibility to carry out this action.
+
