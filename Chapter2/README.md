@@ -390,5 +390,9 @@ public static void main(String[] args){
 }                                         // will kick in, in fact the JVM is entitled to ignore the request if it's busy doing something
 ```
 
-The key thing to take away here is that garbage collection is not in the developers control and it's the JVM's responsibility to carry out this action.
+The key thing to take away here is that garbage collection is not in the developers control and it's the JVM's responsibility to carry out this action. The other key thing we need to identify is when objects become eligble for garbage collection.
+
+### Tracing Eligibility 
+
+
 
