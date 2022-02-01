@@ -394,5 +394,53 @@ The key thing to take away here is that garbage collection is not in the develop
 
 ### Tracing Eligibility 
 
+So, if we don't control it how does it work? The JVM monitors each object until it determines that the code no longer needs that memory. An object will remaind on the heap until it is no longer reachable. An object is no longer reachable when one of two siutaions occurs:
 
+1. The object no longer has any references pointing to it
+2. All references to the object have gone out of scope
+
+## Summary
+
+Summary
+In this chapter, we described the building blocks of Java--most important, what a Java object is, how it is referenced and used, and how it is destroyed. 
+
+* To begin with, constructors create Java objects. A constructor is a method matching the class name and omitting the return type. When an object is instantiated, fields and blocks of code are initialized first. Then the constructor is run.
+* Primitive types are the basic building blocks of Java types. They are assembled into reference types.
+* Reference types can have methods and be assigned to null.
+* Numeric literals are allowed to contain underscores (_) as long as they do not start or end the literal and are not next to a decimal point (.)
+* Declaring a variable involves stating the data type and giving the variable a name.
+* Variables that represent fields in a class are automatically initialized to their corresponding 0, null, or false values during object instantiation.
+* Local variables must be specifically initialized before they can be used.
+* Identifiers may contain letters, numbers, $, or _. Identifiers may not begin with numbers. Local variables may use the var keyword instead of the actual type. When using var, the type is set once at compile time and does not change.
+* Scope refers to that portion of code where a variable can be accessed. There are three kinds of variables in Java, depending on their scope: instance variables, class vari-
+ables, and local variables.
+  * Instance variables are the non-static fields of your class.
+  * Class variables are the static fields within a class.
+  * Local variables are declared within a constructor, method, or initializer block.
+* Garbage collection is responsible for removing objects from memory when they can never be used again. An object becomes eligible for garbage collection when there are no more references to it or its references have all gone out of scope.
+
+## Exam Tips
+
+* Be able to recognize a constructor. A constructor has the same name as the class. It looks like a method without a return type.
+
+* Be able to identify legal and illegal declarations and initialization.
+  *  Multiple variables can be declared and initialized in the same statement when they share a type.
+  *  Local variables require an explicit initialization; others use the default value for that type.
+  *  Identifiers may contain letters, numbers, $, or_, although they may not begin with numbers.
+  *  Also, you cannot define an identifier that is just a single underscore character _.
+  *  Numeric literals may contain underscores between two digits, such as 1_000, but not in other places, such as -180_. 0_.
+  *  Numeric literals can begin with 1-9, 0, ex, OX, ob, and OB, with the latter four indicating a change of numeric base.
+
+* Be able to use var correctly. A var is used for a local variable inside a constructor, a method, or an initializer block.
+  * It cannot be used for constructor parameters, method parameters, instance variables, or class variables.
+  * A var is initialized on the same line where it is declared, and while it can change value, it cannot change type.
+  * A var cannot be initialized with a null value without a type, nor can it be used in multiple variable declara tions.
+  * Finally, var is not a reserved word in Java and can be used as a variable name.
+
+* Be able to determine where variables go into and out of scope. All variables go into scope when they are declared.
+  * Local variables go out of scope when the block they are declared in ends.
+  * Instance variables go out of scope when the object is eligible for garbage collection.
+  * Class variables remain in scope as long as the program is running.
+  
+* Know how to identify when an object is eligible for garbage collection. Draw a diagram to keep track of references and objects as you trace the code. When no arrows point to a box (object), it is eligible for garbage collection.
 
