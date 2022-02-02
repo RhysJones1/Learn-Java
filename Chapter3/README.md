@@ -140,36 +140,31 @@ What is the data type of x + y?
 ```
 double x = 39.21;
 float y = 2.1;
-var 2 = x + y;
+var z = x + y;
 ```
 
 This is actually a trick question, as this code will not compile! As you may remember from Chapter 2, floating-point literals are assumed to be double, unless postfixed with
 an f, as in 2.1f. If the value of y was set properly to 2.1f, then the promotion would be similar to the previous example, with both operands being promoted to a double, and the result would be a double value.
-What is the data type of x * y? pidwamamm
-short X = 10;
+
+What is the data type of x * y? 
+```
+short x = 10;
 short y = 3;
-var 2 = x * y;
-On the last line, we must apply the third rule, namely, that x and y will both be pro.
-moted to int before the binary multiplication operation, resulting in an output of type
-int. If you were to try to assign the value to a short variable without casting, the code
-would not compile. Pay close attention to the fact that the resulting output is not a
-short, as we'll come back to this example in the upcoming "Assigning Values"
-section.
+var z = x * y;
+```
+
+On the last line, we must apply the third rule, namely, that x and y will both be promoted to int before the binary multiplication operation, resulting in an output of type
+int. If you were to try to assign the value to a short variable without casting, the code would not compile. Pay close attention to the fact that the resulting output is not a
+short, as we'll come back to this example in the upcoming "Assigning Values" section.
+
 What is the data type of w * x / y?
-o1818d0 inemnpicab elamia
+```
 short w = 14;
 float x = 13;
-1000
 double y = 30;
-var Z = w* x / y; aldeni
-in ens no eviEv ent en
-In this case, we must apply all of the rules. First, w will automatically be promoted to
-int solely because it is a short and it is being used in an arithmetic binary operation.
-The promoted w value will then be automatically promoted to a float so that it can be
-multiplied with x. The result of w * × will then be automatically promoted to a double
-so that it can be divided by y, resulting in a double value.
-When working arithmetic operators in Java, you should always be aware of the data
-type of variables, intermediate values, and resulting values. You should apply operator pre-
-cedence and parentheses and work outward, promoting data types along the way. In the
-next section, we'll discuss the intricacies of assigning these values to variables of a particu-
-lar type.
+var z = w * x / y;
+```
+
+In this case, we must apply all of the rules. First, w will automatically be promoted to int solely because it is a short and it is being used in an arithmetic binary operation. The promoted w value will then be automatically promoted to a float so that it can be multiplied with x. The result of w * × will then be automatically promoted to a double so that it can be divided by y, resulting in a double value.
+
+When working arithmetic operators in Java, you should always be aware of the data type of variables, intermediate values, and resulting values. You should apply operator precedence and parentheses and work outward, promoting data types along the way. In the next section, we'll discuss the intricacies of assigning these values to variables of a particular type.
