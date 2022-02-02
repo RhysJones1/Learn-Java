@@ -137,7 +137,7 @@ If we follow the first rule, since one of the values is long and the other is in
 value is long.
 
 What is the data type of x + y?
-```
+```Java
 double x = 39.21;
 float y = 2.1;
 var z = x + y;
@@ -147,7 +147,7 @@ This is actually a trick question, as this code will not compile! As you may rem
 an f, as in 2.1f. If the value of y was set properly to 2.1f, then the promotion would be similar to the previous example, with both operands being promoted to a double, and the result would be a double value.
 
 What is the data type of x * y? 
-```
+```Java
 short x = 10;
 short y = 3;
 var z = x * y;
@@ -158,7 +158,7 @@ int. If you were to try to assign the value to a short variable without casting,
 short, as we'll come back to this example in the upcoming "Assigning Values" section.
 
 What is the data type of w * x / y?
-```
+```Java
 short w = 14;
 float x = 13;
 double y = 30;
