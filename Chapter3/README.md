@@ -221,3 +221,19 @@ public class Main {
   }
 }
 ```
+### Comparisons Operators  
+
+Comparison operators are used to compare two values:
+
+![image](https://user-images.githubusercontent.com/91537105/152315915-763d5dca-d453-4f5f-96bb-ffa26e7d4bb7.png)
+
+### Compound Assignment Operators
+
+![image](https://user-images.githubusercontent.com/91537105/152337865-0d2844a3-7367-4968-a6d7-a73cf9207a3a.png)
+
+### Java Logical Operators
+
+Logical operators are used to determine the logic between variables or values:
+
+![image](https://user-images.githubusercontent.com/91537105/152338260-a3d001a7-b69e-48a5-a9a3-4ff0965459fd.png)
+
