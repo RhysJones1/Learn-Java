@@ -168,3 +168,56 @@ var z = w * x / y;
 In this case, we must apply all of the rules. First, w will automatically be promoted to int solely because it is a short and it is being used in an arithmetic binary operation. The promoted w value will then be automatically promoted to a float so that it can be multiplied with x. The result of w * × will then be automatically promoted to a double so that it can be divided by y, resulting in a double value.
 
 When working arithmetic operators in Java, you should always be aware of the data type of variables, intermediate values, and resulting values. You should apply operator precedence and parentheses and work outward, promoting data types along the way. In the next section, we'll discuss the intricacies of assigning these values to variables of a particular type.
+
+### Assignment Operator 
+
+Assignment operators are used to assign values to variables. ``` x = 10;```
+
+The addition assignment operator (+=) adds a value to a variable:
+
+int x = 10;
+x += 5;
+
+### Casting 
+
+Type casting is when you assign a value of one primitive data type to another type.
+
+In Java, there are two types of casting:
+
+* Widening Casting (automatically) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
+
+* Narrowing Casting (manually) - converting a larger type to a smaller size type
+double -> float -> long -> int -> char -> short -> byte
+
+#### Widening Casting
+
+Widening casting is done automatically when passing a smaller size type to a larger size type:
+
+``` Java
+public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // Automatic casting: int to double
+
+    System.out.println(myInt);      // Outputs 9
+    System.out.println(myDouble);   // Outputs 9.0
+  }
+}
+```
+
+####  Narrowing Casting
+
+Narrowing casting must be done manually by placing the type in parentheses in front of the value:
+
+``` Java
+public class Main {
+  public static void main(String[] args) {
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble; // Manual casting: double to int
+
+    System.out.println(myDouble);   // Outputs 9.78
+    System.out.println(myInt);      // Outputs 9
+  }
+}
+```
