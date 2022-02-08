@@ -99,6 +99,13 @@ public class MortgageCalculatorV3 {
         return balance;
 
     }
+/*
+How can we improve this code?
+It's very procedural. It has a load of unrelated methods that call each other
+and they are all a part of the main class. We don't have encapsulation, 
+we don't have abstraction.
 
+The next version will be around refactoring towards an object orientated design.
+*/
 
 }
