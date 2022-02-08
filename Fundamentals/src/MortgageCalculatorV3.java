@@ -106,6 +106,11 @@ and they are all a part of the main class. We don't have encapsulation,
 we don't have abstraction.
 
 The next version will be around refactoring towards an object orientated design.
+
+We can use encapsulation to package up the data and methods
+
+We can also use abstraction to hide some of the implementation and some 
+of the details.
 */
 
 }
